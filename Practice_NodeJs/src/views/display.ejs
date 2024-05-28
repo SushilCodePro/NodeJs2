@@ -1,0 +1,21 @@
+<!-- src/views/display.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Submissions</title>
+</head>
+<body>
+  <h1>Submissions</h1>
+  <ul>
+    <% submissions.forEach(submission => { %>
+      <li>
+        <!-- <h2><%= submission.name %></h2> -->
+        <p>Name: <%= submission.name %></p>
+        <p>Product: <%= submission.product %></p>
+        <p>Price: <%= submission.price %></p>
+      </li>
+    <% }); %>
+  </ul>
+</body>
+</html>
