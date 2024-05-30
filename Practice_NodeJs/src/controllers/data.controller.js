@@ -6,14 +6,14 @@ export const renderForm = (req, res) => {
     res.render('form');
   };
 // Handle form submission
+// Handle form submission
 export const uploadData = (req, res) => {
   const { name, product, price } = req.body;
+  const image = req.file ? req.file.filename : null;
 
-  console.log(req.body);
   // Save data to the in-memory storage
-  submissions.push({ name, product, price });
+  submissions.push({ name, product, price, image });
 
-console.log(submissions);
   // Redirect to display page
   res.redirect('/display');
 };

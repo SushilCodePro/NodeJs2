@@ -14,6 +14,8 @@
         <p>Name: <%= submission.name %></p>
         <p>Product: <%= submission.product %></p>
         <p>Price: <%= submission.price %></p>
+        <p>Image: <img src="/uploads/<%= submission.image %>" alt="<%= submission.name %>"></p> <!-- Display uploaded image -->
+      </li>
       </li>
     <% }); %>
   </ul>
